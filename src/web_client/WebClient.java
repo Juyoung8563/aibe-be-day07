@@ -14,6 +14,7 @@ public abstract class WebClient implements IWebClient {
     public String sendRequest(HttpRequest request) throws IOException, InterruptedException {
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         String body = response.body();
+        logger.info(response.statusCode() + "");
         logger.info(body);
         return response.body();
     }
