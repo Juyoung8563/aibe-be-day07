@@ -4,6 +4,10 @@ import web_client.WebClient;
 
 public class LLM extends WebClient implements ILLM {
 
+    @Override
+    public <T> T callAPI(LLMModel model) {
+        return null;
+    }
 }
 
 /**
